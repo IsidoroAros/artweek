@@ -3,11 +3,16 @@ import { useInView } from "react-intersection-observer"
 // import { IoVolumeHigh, IoVolumeMute } from "react-icons/io5"
 import { VideoContainer, VideoSectionContainer } from "./VideoSection.styled"
 
-// Rutas de los videos usando VITE_BASE_URL
+// Import videos as Vite assets to ensure they're included in the build
+import videoDesktopNoTextUrl from "/public/video/2025_DCL_Art_Week_Promo_Video_1920x1080_No_sound.mp4"
+import videoMobileUrl from "/public/video/2025_DCL_Art_Week_Promo_Video_1080x1080_No_sound.mp4"
+
+// Handle base URL for production deployments
 const baseUrl = import.meta.env.VITE_BASE_URL || ""
-const videoDesktopNoText = `${baseUrl}public/video/2025_DCL_Art_Week_Promo_Video_1080x1080_No_sound.mov`
-const videoMobile = `${baseUrl}/public/video/2025_DCL_Art_Week_Promo_Video_1080x1080_No_sound.mov`
-// const videoMobile = `${baseUrl}/videos/teaser-mobile.mp4`;
+const videoDesktopNoText = baseUrl
+  ? `${baseUrl}/${videoDesktopNoTextUrl}`
+  : videoDesktopNoTextUrl
+const videoMobile = baseUrl ? `${baseUrl}/${videoMobileUrl}` : videoMobileUrl
 
 const VideoSection = () => {
   const [videoElement, setVideoElement] = useState<HTMLVideoElement | null>(
@@ -50,16 +55,21 @@ const VideoSection = () => {
     if (!videoElement) return
 
     if (inView) {
+      // Ensure video is muted for mobile autoplay
+      videoElement.muted = true
       videoElement.play().catch((error) => {
         console.error("Error al reproducir el video:", error)
-        if (error.name === "NotAllowedError") {
+        // Try to play again after a short delay for mobile devices
+        setTimeout(() => {
           videoElement.play().catch((e) => {
-            console.error("Error al reproducir el video silenciado:", e)
+            console.error(
+              "Error al reproducir el video después del reintento:",
+              e
+            )
           })
-        }
+        }, 100)
       })
     } else {
-      videoElement.muted = true
       videoElement.pause()
     }
   }, [inView, videoElement])
@@ -74,7 +84,9 @@ const VideoSection = () => {
           ref={setRefs}
           loop
           playsInline
-          // muted={isMuted}
+          muted
+          webkit-playsinline="true"
+          preload="metadata"
           src={isMobile ? videoMobile : videoDesktopNoText}
         />
       </VideoContainer>
