@@ -1,14 +1,15 @@
-import { styled } from "styled-components"
+import styled from "styled-components"
 import { breakpoints, theme } from "../../utils/theme"
 
 export const InstallationsContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   min-height: 100vh;
   width: 100%;
-  padding-block: 100px;
+  padding: 120px 0;
+  background: ${theme.white};
 
   * {
     color: ${theme.black};
@@ -16,135 +17,236 @@ export const InstallationsContainer = styled.section`
 
   .installations__inner-container {
     width: 100%;
-    max-width: 1240px;
-    padding: 20px 24px;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0 24px;
+
+    @media (max-width: ${breakpoints.md}) {
+      gap: 32px;
+      padding: 0 16px;
+    }
+  }
+
+  .installations__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    max-width: 800px;
 
     h2 {
-      font-size: 40px;
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1.03;
+      letter-spacing: -3px;
+      color: ${theme.black};
+      margin: 0;
+
+      @media (max-width: ${breakpoints.md}) {
+        font-size: 2.5rem;
+        letter-spacing: -2px;
+      }
+
+      @media (max-width: ${breakpoints.s}) {
+        font-size: 2rem;
+        letter-spacing: -1px;
+      }
+    }
+  }
+
+  .installations__subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.5px;
+    color: #43404A;
+    text-align: center;
+    max-width: 686px;
+    margin: 0;
+
+    @media (max-width: ${breakpoints.md}) {
+      font-size: 16px;
+    }
+
+    @media (max-width: ${breakpoints.s}) {
+      font-size: 14px;
+    }
+  }
+`
+
+export const MapContainer = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+
+  .map-background {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: ${breakpoints.lg}) {
+      height: 500px;
+    }
+
+    @media (max-width: ${breakpoints.md}) {
+      height: 400px;
+    }
+
+    @media (max-width: ${breakpoints.s}) {
+      height: 300px;
+    }
+  }
+
+  .map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+`
+
+export const ArtistLabel = styled.div<{ $left: string; $top: string }>`
+  position: absolute;
+  left: ${props => props.$left};
+  top: ${props => props.$top};
+  background: #EEDDDC;
+  padding: 8px 12px;
+  border-radius: 3.384px;
+  font-family: "Inter", sans-serif;
+  font-size: 15.228px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.423px;
+  color: #161518;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 2;
+
+  @media (max-width: ${breakpoints.lg}) {
+    font-size: 12px;
+    padding: 6px 10px;
+    transform: scale(0.9);
+  }
+
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 10px;
+    padding: 4px 8px;
+    transform: scale(0.8);
+  }
+
+  @media (max-width: ${breakpoints.s}) {
+    font-size: 8px;
+    padding: 3px 6px;
+    transform: scale(0.7);
+  }
+`
+
+export const CardsContainer = styled.div`
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (max-width: ${breakpoints.lg}) {
+    max-width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 0 16px;
+    
+    /* Hide scrollbar for webkit browsers */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    
+    /* Hide scrollbar for firefox */
+    scrollbar-width: none;
+  }
+`
+
+export const InstallationCard = styled.div`
+  display: flex;
+  min-width: 180px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1 0 0;
+  max-width: 280px;
+
+  @media (max-width: ${breakpoints.lg}) {
+    min-width: 160px;
+    max-width: 200px;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: ${breakpoints.s}) {
+    min-width: 140px;
+    max-width: 160px;
+  }
+
+  .card-image {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    width: 100%;
+
+    .card-title {
+      width: 100%;
+      font-family: "Inter", sans-serif;
+      font-size: 18px;
       font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
+      line-height: normal;
+      letter-spacing: -0.5px;
+      color: #161518;
+      margin: 0;
 
-    .installations__filters {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      gap: 20px;
-
-      @media (min-width: ${breakpoints.md}) {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        align-items: flex-end;
-      }
-
-      > div:is(:first-child) {
-        width: 100%;
-        max-width: 400px;
-      }
-
-      div:is(:last-child) {
-        width: 100%;
-        max-width: 200px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 20px;
-
-        &.installations__filters__search {
-          position: relative;
-        }
-
-        input {
-          width: 100%;
-          background-color: ${theme.paleBlack};
-          color: ${theme.white};
-          border: none;
-          padding: 8px 12px;
-          border-radius: 5px;
-          outline: none;
-          color: ${theme.white};
-
-          &::placeholder {
-            color: ${theme.white};
-            opacity: 1;
-          }
-        }
-
-        .search-icon {
-          position: absolute;
-          right: 10px;
-          top: 50%;
-          transform: translateY(-50%);
-          fill: ${theme.white};
-        }
-
-        @media (min-width: ${breakpoints.md}) {
-          justify-content: flex-end;
-        }
+      @media (max-width: ${breakpoints.s}) {
+        font-size: 16px;
       }
     }
 
-    /* GRID */
-    .installations__grid {
+    .card-subtitle {
       width: 100%;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-gap: 20px;
-      grid-row-gap: 20px;
-      margin-top: 24px;
+      font-family: "Inter", sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: -0.5px;
+      color: #716B7C;
+      margin: 0;
 
-      @media (min-width: ${breakpoints.s}) {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      @media (min-width: ${breakpoints.md}) {
-        grid-template-columns: repeat(4, 1fr);
-      }
-
-      @media (min-width: ${breakpoints.l}) {
-        grid-template-columns: repeat(6, 1fr);
-      }
-
-      .installations__grid-item {
-        width: 100%;
-        height: 100%;
-
-        img {
-          width: 100%;
-          aspect-ratio: 1 / 1;
-          object-fit: cover;
-          object-position: center;
-          display: block;
-          border-radius: 10px;
-        }
-
-        h6 {
-          font-size: 16px;
-          line-height: 1.2;
-          margin-top: 10px;
-        }
-      }
-    }
-
-    .installations__no-results {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      margin-top: 24px;
-
-      h2 {
-        color: ${theme.paleBlack};
-      }
-
-      p {
-        color: ${theme.paleBlack};
+      @media (max-width: ${breakpoints.s}) {
+        font-size: 12px;
       }
     }
   }
