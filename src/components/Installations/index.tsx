@@ -38,7 +38,7 @@ const Installations = () => {
               className="map-image"
             />
             {/* Artist labels positioned on the map */}
-            {installations.map((installation) => (
+            {installationsData.map((installation) => (
               <ArtistLabel
                 key={installation.id}
                 $left={installation.mapPosition.left}
@@ -52,7 +52,7 @@ const Installations = () => {
 
         {/* Cards Section */}
         <CardsContainer>
-          {installations.map((installation) => (
+          {installationsData.map((installation) => (
             <InstallationCard key={installation.id}>
               <div className="card-image">
                 <img 
