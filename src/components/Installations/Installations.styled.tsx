@@ -41,7 +41,7 @@ export const InstallationsContainer = styled.section`
     h2 {
       font-size: 4rem;
       font-weight: 800;
-      line-height: 1.03;
+      line-height: 1.2;
       letter-spacing: -3px;
       color: ${theme.black};
       margin: 0;
@@ -87,7 +87,6 @@ export const MapContainer = styled.div`
     width: 100%;
     height: 600px;
     position: relative;
-    border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 
