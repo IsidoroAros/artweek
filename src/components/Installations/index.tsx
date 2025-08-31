@@ -6,7 +6,7 @@ import {
   MapContainer,
   CardsContainer,
   InstallationCard,
-  ArtistLabel
+  ArtistLabel,
 } from "./Installations.styled"
 import { installationsData } from "./data"
 
@@ -25,15 +25,17 @@ const Installations = () => {
             </AnimatedCharacters>
           </h2>
           <p className="installations__subtitle">
-            Zoom out to see how Art Week unfolds across Decentraland—with user-created parties, performances, and activations across Genesis City.
+            Zoom out to see how Art Week unfolds across Decentraland—with
+            user-created parties, performances, and activations across Genesis
+            City.
           </p>
         </div>
 
         {/* Map Section */}
         <MapContainer>
           <div className="map-background">
-            <img 
-              src="https://api.builder.io/api/v1/image/assets/TEMP/cde5fc716f12202372b19e97a33413478e1e86b7?width=2320" 
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/cde5fc716f12202372b19e97a33413478e1e86b7?width=2320"
               alt="Decentraland installations map"
               className="map-image"
             />
@@ -55,10 +57,7 @@ const Installations = () => {
           {installationsData.map((installation) => (
             <InstallationCard key={installation.id}>
               <div className="card-image">
-                <img 
-                  src={installation.image} 
-                  alt={installation.name}
-                />
+                <img src={installation.image} alt={installation.name} />
               </div>
               <div className="card-content">
                 <h3 className="card-title">{installation.name}</h3>

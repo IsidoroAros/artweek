@@ -63,7 +63,7 @@ export const InstallationsContainer = styled.section`
     font-weight: 500;
     line-height: normal;
     letter-spacing: -0.5px;
-    color: #43404A;
+    color: #43404a;
     text-align: center;
     max-width: 686px;
     margin: 0;
@@ -113,9 +113,9 @@ export const MapContainer = styled.div`
 
 export const ArtistLabel = styled.div<{ $left: string; $top: string }>`
   position: absolute;
-  left: ${props => props.$left};
-  top: ${props => props.$top};
-  background: #EEDDDC;
+  left: ${(props) => props.$left};
+  top: ${(props) => props.$top};
+  background: #eedddc;
   padding: 8px 12px;
   border-radius: 3.384px;
   font-family: "Inter", sans-serif;
@@ -162,12 +162,12 @@ export const CardsContainer = styled.div`
     flex-wrap: nowrap;
     justify-content: flex-start;
     padding: 0 16px;
-    
+
     /* Hide scrollbar for webkit browsers */
     &::-webkit-scrollbar {
       display: none;
     }
-    
+
     /* Hide scrollbar for firefox */
     scrollbar-width: none;
   }
@@ -241,7 +241,7 @@ export const InstallationCard = styled.div`
       font-weight: 700;
       line-height: normal;
       letter-spacing: -0.5px;
-      color: #716B7C;
+      color: #716b7c;
       margin: 0;
 
       @media (max-width: ${breakpoints.s}) {
