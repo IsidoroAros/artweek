@@ -128,21 +128,6 @@ const getCalendarIcon = () => (
   </svg>
 )
 
-const getDropdownIcon = () => (
-  <svg
-    width="10"
-    height="10"
-    viewBox="0 0 10 10"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M2.82368 5.02059L3.16395 4.70103C3.24902 4.62114 3.38513 4.62114 3.47019 4.70103L4.94185 6.08314C5.02692 6.16303 5.16302 6.16303 5.24809 6.08314L6.71975 4.70902C6.80481 4.62913 6.94092 4.62913 7.02599 4.70902L7.36625 5.02858C7.45132 5.10847 7.45132 5.2363 7.36625 5.31619L5.24809 7.30546C5.16302 7.38535 5.02692 7.38535 4.94185 7.30546L2.82368 5.31619C2.73862 5.2363 2.73862 5.10847 2.82368 5.02059Z"
-      fill="#33435C"
-    />
-  </svg>
-)
-
 // Function to detect current date and return appropriate default
 const getDefaultDate = () => {
   const today = new Date()
