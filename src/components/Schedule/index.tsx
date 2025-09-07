@@ -213,9 +213,7 @@ const Schedule = () => {
                 </div>
                 <div className="event-time">
                   <div className="time-icon">{getTimeIcon()}</div>
-                  <div className="time-text">
-                    UTC: {event.startTime} - {event.endTime}
-                  </div>
+                  <div className="time-text">UTC: {event.startTime}</div>
                   <div className="calendar-icon">{getCalendarIcon()}</div>
                 </div>
               </div>
@@ -240,7 +238,7 @@ const Schedule = () => {
   return (
     <ScheduleContainer>
       <div className="schedule__inner-container">
-        <h2>Schedule</h2>
+        <h2>Plan Your Week </h2>
 
         {/* Component 1: Date Picker */}
         <DatePickerContainer>
@@ -263,7 +261,7 @@ const Schedule = () => {
           <TimezoneHeader>
             <div className="timezone-selector">
               <div className="timezone-text">Timezone (UTC)</div>
-              <div className="dropdown-icon">{getDropdownIcon()}</div>
+              {/* <div className="dropdown-icon">{getDropdownIcon()}</div> */}
             </div>
             <div className="time-slots">
               {timeSlots.map((time, index) => (

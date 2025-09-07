@@ -20,6 +20,8 @@ import {
   shouldEnableAnalytics,
 } from "./modules/analytics/segment"
 import { AppContainer } from "./App.styled"
+import { Schedule } from "./components/Schedule"
+import { BiggerPictureSection } from "./components/BiggerPictureSection"
 // import { VideoSection } from './components/VideoSection/VideoSection';
 
 // Lazy load VideoSection component
@@ -81,6 +83,14 @@ const App = () => {
           <Marquee variant="light" />
         </MarqueeContainerWrapper>
         <Installations />
+        <MarqueeContainerWrapper>
+          <Marquee variant="light" />
+        </MarqueeContainerWrapper>
+        <Schedule />
+        <MarqueeContainerWrapper>
+          <Marquee variant="light" />
+        </MarqueeContainerWrapper>
+        <BiggerPictureSection />
         <MarqueeContainerWrapper>
           <Marquee variant="light" />
         </MarqueeContainerWrapper>

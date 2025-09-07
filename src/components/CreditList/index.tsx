@@ -24,7 +24,14 @@ const CreditListContainer = styled.div`
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    /* margin: 0 auto; */
+  }
+  h4 {
+    font-size: 1.2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    font-weight: 400;
+    margin-top: 16px;
   }
 
   @media (min-width: ${breakpoints.md}) {
@@ -98,12 +105,20 @@ const CreditList = () => {
 
   return (
     <CreditListContainer>
-      <h2>
-        <AnimatedCharacters isVisible={true}>Credit List</AnimatedCharacters>
-      </h2>
+      <div>
+        <h2>
+          <AnimatedCharacters isVisible={true}>Credit List</AnimatedCharacters>
+        </h2>
+        <h4>
+          En Credit list agregar este subtitulo: Alongside the artists and
+          studios listed here, Art Week is made possible by the creativity and
+          contributions of the Decentraland community.
+        </h4>
+      </div>
       <CreditListContent>
         <Section>
           <SectionTitle>Artists & Curators</SectionTitle>
+
           <ColumnsContainer>
             <Column>
               {artistsColumn1.map((name, index) => (

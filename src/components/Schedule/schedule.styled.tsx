@@ -181,7 +181,7 @@ const TimezoneHeader = styled.div`
 
   .timezone-selector {
     display: flex;
-    height: 18.681px;
+    /* height: 18.681px; */
     padding: 4.67px 6.227px;
     justify-content: center;
     align-items: center;
