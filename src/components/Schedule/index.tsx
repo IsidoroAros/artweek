@@ -150,9 +150,9 @@ const getDefaultDate = () => {
 const Schedule = () => {
   const [activeDate, setActiveDate] = useState(getDefaultDate())
 
-  // Calculate cell width based on time duration (140px per hour slot)
+  // Calculate cell width based on time duration (200px per hour slot)
   const calculateCellWidth = (duration: number) => {
-    return 140 * duration
+    return 200 * duration
   }
 
   // Create grid layout for a specific stage
@@ -200,7 +200,6 @@ const Schedule = () => {
                 <div className="event-time">
                   <div className="time-icon">{getTimeIcon()}</div>
                   <div className="time-text">UTC: {event.startTime}</div>
-                  <div className="calendar-icon">{getCalendarIcon()}</div>
                 </div>
               </div>
             </div>

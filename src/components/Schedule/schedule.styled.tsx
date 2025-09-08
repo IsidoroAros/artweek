@@ -173,7 +173,7 @@ const TimezoneHeader = styled.div`
   align-items: flex-start;
   gap: 48px;
   width: 100%;
-  min-width: calc(106px + 140px * 14);
+  min-width: calc(106px + 200px * 14);
   border-top: 1px solid #203455;
   border-bottom: 1px solid #203455;
   background: #33435c;
@@ -212,12 +212,12 @@ const TimezoneHeader = styled.div`
 
   .time-slots {
     display: flex;
-    padding-left: 150px;
+    padding-left: 106px;
     align-items: center;
     flex: 1;
 
     .time-slot {
-      width: 140px;
+      width: 200px;
       color: #fcfcfc;
       text-shadow: 0 4px 2px rgba(255, 255, 255, 0.15);
       font-family: "Inter", sans-serif;
@@ -225,6 +225,7 @@ const TimezoneHeader = styled.div`
       font-weight: 600;
       line-height: normal;
       letter-spacing: -0.5px;
+      text-align: center;
     }
   }
 `
@@ -233,7 +234,7 @@ const ScheduleGrid = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-width: calc(106px + 140px * 14);
+  min-width: calc(106px + 200px * 14);
 `
 
 const ScheduleRow = styled.div`
@@ -241,7 +242,7 @@ const ScheduleRow = styled.div`
   height: 200px;
   align-items: stretch;
   width: 100%;
-  min-width: calc(106px + 140px * 14);
+  min-width: calc(106px + 200px * 14);
   transition: all 0.3s ease;
 `
 
@@ -284,8 +285,7 @@ const EventSlot = styled.div<{ width?: number }>`
   flex-shrink: 0;
   overflow: hidden;
   transition: all 0.3s ease;
-  cursor: pointer;
-  width: ${(props) => (props.width ? `${props.width}px` : "140px")};
+  width: ${(props) => (props.width ? `${props.width}px` : "200px")};
 
   &:hover {
     background-color: rgba(128, 128, 128, 0.1);
@@ -395,7 +395,7 @@ const EventSlot = styled.div<{ width?: number }>`
 
 const EmptySlot = styled.div`
   display: flex;
-  width: 140px;
+  width: 200px;
   height: 200px;
   justify-content: center;
   align-items: center;
