@@ -86,6 +86,14 @@ const App = () => {
         <MarqueeContainerWrapper>
           <Marquee variant="light" />
         </MarqueeContainerWrapper>
+        <Schedule />
+        <MarqueeContainerWrapper>
+          <Marquee variant="light" />
+        </MarqueeContainerWrapper>
+        <BiggerPictureSection />
+        <MarqueeContainerWrapper>
+          <Marquee variant="light" />
+        </MarqueeContainerWrapper>
         <About />
         <Suspense fallback={<VideoSectionLoader />}>
           <VideoSection />
