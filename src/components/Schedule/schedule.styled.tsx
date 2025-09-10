@@ -35,6 +35,18 @@ const ScheduleContainer = styled.section`
         font-size: 2.5rem;
       }
     }
+    h4 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1.2;
+      color: ${theme.black};
+      text-align: center;
+    }
+    @media (max-width: ${breakpoints.md}) {
+      h4 {
+        font-size: 1rem;
+      }
+    }
   }
 `
 

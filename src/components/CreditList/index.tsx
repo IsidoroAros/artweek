@@ -110,9 +110,9 @@ const CreditList = () => {
           <AnimatedCharacters isVisible={true}>Credit List</AnimatedCharacters>
         </h2>
         <h4>
-          En Credit list agregar este subtitulo: Alongside the artists and
-          studios listed here, Art Week is made possible by the creativity and
-          contributions of the Decentraland community.
+          Alongside the artists and studios listed here, Art Week is made
+          possible by the creativity and contributions of the Decentraland
+          community.
         </h4>
       </div>
       <CreditListContent>

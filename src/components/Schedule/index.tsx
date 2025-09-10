@@ -223,7 +223,13 @@ const Schedule = () => {
   return (
     <ScheduleContainer>
       <div className="schedule__inner-container">
-        <h2>Plan Your Week </h2>
+        <div>
+          <h2>Plan Your Week </h2>
+          <h4>
+            See what’s happening each day of Art Week—tours, workshops, parties,
+            and more.
+          </h4>
+        </div>
 
         {/* Component 1: Date Picker */}
         <DatePickerContainer>
