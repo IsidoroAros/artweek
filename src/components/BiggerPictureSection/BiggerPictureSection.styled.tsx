@@ -75,114 +75,14 @@ const MapContainer = styled.div`
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  position: relative;
-  background: lightgray;
-  background-image: url("https://api.builder.io/api/v1/image/assets/TEMP/cde5fc716f12202372b19e97a33413478e1e86b7?width=2320");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 500px;
-  overflow: hidden;
-  margin-bottom: 40px;
-
-  @media (min-width: ${breakpoints.md}) {
-    height: 600px;
-  }
-
-  @media (min-width: ${breakpoints.l}) {
-    height: 755px;
-  }
-`
-
-const MapOverlay = styled.div`
-  position: absolute;
-  inset: 0;
-  padding: 20px;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-
-  @media (min-width: ${breakpoints.md}) {
-    padding: 40px;
-  }
-
-  @media (min-width: ${breakpoints.l}) {
-    padding: 81.5px 109.369px 82.131px 164px;
-  }
-`
-
-const ArtistLocationsContainer = styled.div`
-  position: absolute;
-  width: 100%;
+  justify-content: center;
   height: 100%;
-  pointer-events: none;
-
-  @media (min-width: ${breakpoints.l}) {
-    width: 887px;
-    height: 591px;
-    left: 164px;
-    top: 82px;
-  }
-`
-
-const ArtistLocation = styled.div<{
-  width: number
-  height: number
-  left: number
-  top: number
-}>`
-  position: absolute;
-  width: ${(props) => props.width}px;
-  height: ${(props) => props.height}px;
-  left: ${(props) => props.left}px;
-  top: ${(props) => props.top}px;
-  background: #eedddc;
-  border-radius: 3.384px;
-  pointer-events: none;
-
-  @media (max-width: ${breakpoints.l}) {
-    transform: scale(0.7);
-    transform-origin: top left;
-  }
-
-  @media (max-width: ${breakpoints.md}) {
-    transform: scale(0.5);
-    transform-origin: top left;
-  }
-`
-
-const ArtistLabel = styled.div<{
-  left: number
-  top: number
-  width?: number
-  centered?: boolean
-}>`
-  position: absolute;
-  left: ${(props) => props.left}px;
-  top: ${(props) => props.top}px;
-  width: ${(props) => props.width || "auto"}px;
-  color: ${theme.black};
-  font-family:
-    Inter,
-    -apple-system,
-    Roboto,
-    Helvetica,
-    sans-serif;
-  font-size: 15.228px;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -0.423px;
-  pointer-events: none;
-  ${(props) => props.centered && `text-align: center;`}
-
-  @media (max-width: ${breakpoints.l}) {
-    transform: scale(0.7);
-    transform-origin: top left;
-  }
-
-  @media (max-width: ${breakpoints.md}) {
-    transform: scale(0.5);
-    transform-origin: top left;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 `
 
@@ -485,10 +385,6 @@ export {
   MainTitle,
   Subtitle,
   MapContainer,
-  MapOverlay,
-  ArtistLocationsContainer,
-  ArtistLocation,
-  ArtistLabel,
   ArtistCardsContainer,
   ArtistCardsGrid,
   ArtistCard,

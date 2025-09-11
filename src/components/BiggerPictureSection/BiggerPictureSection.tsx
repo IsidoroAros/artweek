@@ -1,13 +1,10 @@
-import { FC, Fragment, useState } from "react"
+import { FC, useState } from "react"
 import { GoArrowUpRight } from "react-icons/go"
 import { IoMdClose } from "react-icons/io"
 import { RiLink } from "react-icons/ri"
-import {
-  artistCards,
-  artistLocations,
-  ArtistCard as ArtistCardType,
-} from "./data"
+import { artistCards, ArtistCard as ArtistCardType } from "./data"
 import { Modal } from "../Modal"
+import map from "../../../public/img/bigger-picture/map-bigger-pic.png"
 import {
   ArtistCard,
   ArtistCardsContainer,
@@ -16,15 +13,11 @@ import {
   ArtistDetails,
   ArtistImage,
   ArtistInfo,
-  ArtistLabel,
-  ArtistLocation,
-  ArtistLocationsContainer,
   ArtistModalContainer,
   ArtistName,
   BiggerPictureSectionContainer,
   MainTitle,
   MapContainer,
-  MapOverlay,
   Subtitle,
   TitleSection,
 } from "./BiggerPictureSection.styled"
@@ -56,30 +49,7 @@ const BiggerPictureSection: FC = () => {
         </TitleSection>
 
         <MapContainer>
-          <MapOverlay>
-            <ArtistLocationsContainer>
-              {artistLocations.map((location) => (
-                <Fragment key={location.id}>
-                  <ArtistLocation
-                    width={location.width}
-                    height={location.height}
-                    left={location.left}
-                    top={location.top}
-                  />
-                  {location.name && (
-                    <ArtistLabel
-                      left={location.labelLeft}
-                      top={location.labelTop}
-                      width={location.labelWidth}
-                      centered={location.labelCentered}
-                    >
-                      {location.name}
-                    </ArtistLabel>
-                  )}
-                </Fragment>
-              ))}
-            </ArtistLocationsContainer>
-          </MapOverlay>
+          <img src={map} alt="map" />
         </MapContainer>
 
         <ArtistCardsContainer>

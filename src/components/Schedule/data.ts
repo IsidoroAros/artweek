@@ -1,46 +1,48 @@
-// Schedule data for all days with proper time ranges and positions
-interface ScheduleEvent {
+export interface ScheduleEvent {
   id: number
   title: string
   speaker: string
   type: "X Space" | "Workshop" | "Tour" | "Community"
   stage: "MainStage"
-  startTime: string // e.g., "11:00"
-  endTime: string // e.g., "12:00"
-  timeSlotStart: number // index position for start time
-  timeSlotEnd: number // index position for end time
-  duration: number // number of time slots this event spans
+  startTime: string
+  endTime: string
+  timeSlotStart: number
+  timeSlotEnd: number
+  duration: number
 }
 
-interface StageSchedule {
+export interface StageSchedule {
   [stageName: string]: ScheduleEvent[]
 }
 
-interface DaySchedule {
+export interface DaySchedule {
   [key: string]: StageSchedule
 }
 
-// Time slots mapping (14 total slots as per Figma design)
-const timeSlots = [
-  "11:00 am", // 0
-  "Midday", // 1 (12:00)
-  "1:00 pm", // 2
-  "2:00 pm", // 3
-  "3:00 pm", // 4
-  "4:00 pm", // 5
-  "5:00 pm", // 6
-  "6:00 pm", // 7
-  "8:00 pm", // 8
-  "9:00 pm", // 9
-  "10:00 pm", // 10
-  "11:00 pm", // 11
-  "Midnight", // 12
-  "1:00 am", // 13
+export const timeSlots: string[] = [
+  "10:00", // 0
+  "11:00", // 1
+  "12:00", // 2 (Midday)
+  "13:00", // 3
+  "14:00", // 4
+  "15:00", // 5
+  "16:00", // 6
+  "17:00", // 7
+  "18:00", // 8
+  "19:00", // 9
+  "20:00", // 10
+  "21:00", // 11
+  "22:00", // 12
+  "23:00", // 13
+  "Midnight", // 14 (Midnight)
+  "01:00", // 15
+  "02:00", // 16
 ]
 
-const stages = ["MainStage"]
+export const stages = ["MainStage"] as const
 
-const scheduleData: DaySchedule = {
+export const scheduleData: DaySchedule = {
+  "sept-23": { MainStage: [] },
   "sept-24": {
     MainStage: [
       {
@@ -50,9 +52,9 @@ const scheduleData: DaySchedule = {
         type: "X Space",
         stage: "MainStage",
         startTime: "11:00",
-        endTime: "11:00",
-        timeSlotStart: 0,
-        timeSlotEnd: 0,
+        endTime: "12:00",
+        timeSlotStart: 1,
+        timeSlotEnd: 1,
         duration: 1,
       },
       {
@@ -63,9 +65,9 @@ const scheduleData: DaySchedule = {
         type: "Workshop",
         stage: "MainStage",
         startTime: "12:00",
-        endTime: "12:00",
-        timeSlotStart: 1,
-        timeSlotEnd: 1,
+        endTime: "13:00",
+        timeSlotStart: 2,
+        timeSlotEnd: 2,
         duration: 1,
       },
       {
@@ -74,10 +76,10 @@ const scheduleData: DaySchedule = {
         speaker: "Bay",
         type: "Tour",
         stage: "MainStage",
-        startTime: "1:00",
-        endTime: "1:00",
-        timeSlotStart: 2,
-        timeSlotEnd: 2,
+        startTime: "13:00",
+        endTime: "14:00",
+        timeSlotStart: 3,
+        timeSlotEnd: 3,
         duration: 1,
       },
       {
@@ -87,10 +89,10 @@ const scheduleData: DaySchedule = {
         speaker: "Nico Earnshaw / Bay?",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "2:00",
-        endTime: "2:00",
-        timeSlotStart: 3,
-        timeSlotEnd: 3,
+        startTime: "14:00",
+        endTime: "15:00",
+        timeSlotStart: 4,
+        timeSlotEnd: 4,
         duration: 1,
       },
       {
@@ -100,22 +102,22 @@ const scheduleData: DaySchedule = {
         speaker: "Bay - DANA",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "3:00",
-        endTime: "3:00",
-        timeSlotStart: 4,
-        timeSlotEnd: 4,
+        startTime: "15:00",
+        endTime: "16:00",
+        timeSlotStart: 5,
+        timeSlotEnd: 5,
         duration: 1,
       },
       {
         id: 6,
-        title: "Your Art in Decentraland? Here’s How to Make It Happen",
+        title: "Your Art in Decentraland? Here's How to Make It Happen",
         speaker: "Kim",
         type: "X Space",
         stage: "MainStage",
-        startTime: "8:00",
-        endTime: "8:00",
-        timeSlotStart: 8,
-        timeSlotEnd: 8,
+        startTime: "20:00",
+        endTime: "21:00",
+        timeSlotStart: 10,
+        timeSlotEnd: 10,
         duration: 1,
       },
       {
@@ -124,10 +126,10 @@ const scheduleData: DaySchedule = {
         speaker: "Bay / Kim",
         type: "Tour",
         stage: "MainStage",
-        startTime: "9:00",
-        endTime: "9:00",
-        timeSlotStart: 9,
-        timeSlotEnd: 9,
+        startTime: "21:00",
+        endTime: "22:00",
+        timeSlotStart: 11,
+        timeSlotEnd: 11,
         duration: 1,
       },
       {
@@ -137,10 +139,10 @@ const scheduleData: DaySchedule = {
         speaker: "Nico Earnshaw / Bay",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "10:00",
-        endTime: "10:00",
-        timeSlotStart: 10,
-        timeSlotEnd: 10,
+        startTime: "22:00",
+        endTime: "23:00",
+        timeSlotStart: 12,
+        timeSlotEnd: 12,
         duration: 1,
       },
       {
@@ -150,10 +152,10 @@ const scheduleData: DaySchedule = {
         speaker: "Dana",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "11:00",
-        endTime: "11:00",
-        timeSlotStart: 11,
-        timeSlotEnd: 11,
+        startTime: "23:00",
+        endTime: "00:00",
+        timeSlotStart: 13,
+        timeSlotEnd: 13,
         duration: 1,
       },
       {
@@ -162,10 +164,10 @@ const scheduleData: DaySchedule = {
         speaker: "RAGE",
         type: "Community",
         stage: "MainStage",
-        startTime: "1:00",
-        endTime: "1:00",
-        timeSlotStart: 13,
-        timeSlotEnd: 13,
+        startTime: "01:00",
+        endTime: "02:00",
+        timeSlotStart: 15,
+        timeSlotEnd: 15,
         duration: 1,
       },
     ],
@@ -179,9 +181,9 @@ const scheduleData: DaySchedule = {
         type: "X Space",
         stage: "MainStage",
         startTime: "11:00",
-        endTime: "11:00",
-        timeSlotStart: 0,
-        timeSlotEnd: 0,
+        endTime: "12:00",
+        timeSlotStart: 1,
+        timeSlotEnd: 1,
         duration: 1,
       },
       {
@@ -191,9 +193,9 @@ const scheduleData: DaySchedule = {
         type: "Workshop",
         stage: "MainStage",
         startTime: "12:00",
-        endTime: "12:00",
-        timeSlotStart: 1,
-        timeSlotEnd: 1,
+        endTime: "13:00",
+        timeSlotStart: 2,
+        timeSlotEnd: 2,
         duration: 1,
       },
       {
@@ -202,10 +204,10 @@ const scheduleData: DaySchedule = {
         speaker: "Bay",
         type: "Tour",
         stage: "MainStage",
-        startTime: "1:00",
-        endTime: "1:00",
-        timeSlotStart: 2,
-        timeSlotEnd: 2,
+        startTime: "13:00",
+        endTime: "14:00",
+        timeSlotStart: 3,
+        timeSlotEnd: 3,
         duration: 1,
       },
       {
@@ -214,10 +216,10 @@ const scheduleData: DaySchedule = {
         speaker: "Nico Earnshaw / Bay / Kim",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "2:00",
-        endTime: "2:00",
-        timeSlotStart: 3,
-        timeSlotEnd: 3,
+        startTime: "14:00",
+        endTime: "15:00",
+        timeSlotStart: 4,
+        timeSlotEnd: 4,
         duration: 1,
       },
       {
@@ -226,10 +228,10 @@ const scheduleData: DaySchedule = {
         speaker: "Artivive",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "3:00",
-        endTime: "3:00",
-        timeSlotStart: 4,
-        timeSlotEnd: 4,
+        startTime: "15:00",
+        endTime: "16:00",
+        timeSlotStart: 5,
+        timeSlotEnd: 5,
         duration: 1,
       },
       {
@@ -239,10 +241,10 @@ const scheduleData: DaySchedule = {
         speaker: "Bay",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "4:00",
-        endTime: "4:00",
-        timeSlotStart: 5,
-        timeSlotEnd: 5,
+        startTime: "16:00",
+        endTime: "17:00",
+        timeSlotStart: 6,
+        timeSlotEnd: 6,
         duration: 1,
       },
       {
@@ -251,10 +253,10 @@ const scheduleData: DaySchedule = {
         speaker: "Brave x Decentraland",
         type: "X Space",
         stage: "MainStage",
-        startTime: "8:00",
-        endTime: "8:00",
-        timeSlotStart: 8,
-        timeSlotEnd: 8,
+        startTime: "20:00",
+        endTime: "21:00",
+        timeSlotStart: 10,
+        timeSlotEnd: 10,
         duration: 1,
       },
       {
@@ -263,10 +265,10 @@ const scheduleData: DaySchedule = {
         speaker: "Brave",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "9:00",
-        endTime: "9:00",
-        timeSlotStart: 9,
-        timeSlotEnd: 9,
+        startTime: "21:00",
+        endTime: "22:00",
+        timeSlotStart: 11,
+        timeSlotEnd: 11,
         duration: 1,
       },
       {
@@ -275,10 +277,10 @@ const scheduleData: DaySchedule = {
         speaker: "Nico Earnshaw / Bay / Kim",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "10:00",
-        endTime: "10:00",
-        timeSlotStart: 10,
-        timeSlotEnd: 10,
+        startTime: "22:00",
+        endTime: "23:00",
+        timeSlotStart: 12,
+        timeSlotEnd: 12,
         duration: 1,
       },
       {
@@ -287,10 +289,10 @@ const scheduleData: DaySchedule = {
         speaker: "Artivive",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "11:00",
-        endTime: "11:00",
-        timeSlotStart: 11,
-        timeSlotEnd: 11,
+        startTime: "23:00",
+        endTime: "00:00",
+        timeSlotStart: 13,
+        timeSlotEnd: 13,
         duration: 1,
       },
       {
@@ -299,10 +301,22 @@ const scheduleData: DaySchedule = {
         speaker: "Facemoon",
         type: "Community",
         stage: "MainStage",
-        startTime: "1:00",
-        endTime: "1:00",
-        timeSlotStart: 13,
-        timeSlotEnd: 13,
+        startTime: "01:00",
+        endTime: "02:00",
+        timeSlotStart: 15,
+        timeSlotEnd: 15,
+        duration: 1,
+      },
+      {
+        id: 43,
+        title: "Community Art Tour by CBD",
+        speaker: "Community Building DCL",
+        type: "Tour",
+        stage: "MainStage",
+        startTime: "02:00",
+        endTime: "02:00",
+        timeSlotStart: 16,
+        timeSlotEnd: 16,
         duration: 1,
       },
     ],
@@ -316,9 +330,9 @@ const scheduleData: DaySchedule = {
         type: "X Space",
         stage: "MainStage",
         startTime: "11:00",
-        endTime: "11:00",
-        timeSlotStart: 0,
-        timeSlotEnd: 0,
+        endTime: "12:00",
+        timeSlotStart: 1,
+        timeSlotEnd: 1,
         duration: 1,
       },
       {
@@ -329,9 +343,9 @@ const scheduleData: DaySchedule = {
         type: "Workshop",
         stage: "MainStage",
         startTime: "12:00",
-        endTime: "12:00",
-        timeSlotStart: 1,
-        timeSlotEnd: 1,
+        endTime: "13:00",
+        timeSlotStart: 2,
+        timeSlotEnd: 2,
         duration: 1,
       },
       {
@@ -340,10 +354,10 @@ const scheduleData: DaySchedule = {
         speaker: "Bay",
         type: "Tour",
         stage: "MainStage",
-        startTime: "1:00",
-        endTime: "1:00",
-        timeSlotStart: 2,
-        timeSlotEnd: 2,
+        startTime: "13:00",
+        endTime: "14:00",
+        timeSlotStart: 3,
+        timeSlotEnd: 3,
         duration: 1,
       },
       {
@@ -352,10 +366,10 @@ const scheduleData: DaySchedule = {
         speaker: "Sloyd",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "2:00",
-        endTime: "2:00",
-        timeSlotStart: 3,
-        timeSlotEnd: 3,
+        startTime: "14:00",
+        endTime: "15:00",
+        timeSlotStart: 4,
+        timeSlotEnd: 4,
         duration: 1,
       },
       {
@@ -364,10 +378,10 @@ const scheduleData: DaySchedule = {
         speaker: "CSM",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "3:00",
-        endTime: "3:00",
-        timeSlotStart: 4,
-        timeSlotEnd: 4,
+        startTime: "15:00",
+        endTime: "16:00",
+        timeSlotStart: 5,
+        timeSlotEnd: 5,
         duration: 1,
       },
       {
@@ -376,10 +390,10 @@ const scheduleData: DaySchedule = {
         speaker: "Kim",
         type: "X Space",
         stage: "MainStage",
-        startTime: "8:00",
-        endTime: "8:00",
-        timeSlotStart: 8,
-        timeSlotEnd: 8,
+        startTime: "20:00",
+        endTime: "21:00",
+        timeSlotStart: 10,
+        timeSlotEnd: 10,
         duration: 1,
       },
       {
@@ -388,23 +402,23 @@ const scheduleData: DaySchedule = {
         speaker: "Kim /Dana",
         type: "Tour",
         stage: "MainStage",
-        startTime: "9:00",
-        endTime: "9:00",
-        timeSlotStart: 9,
-        timeSlotEnd: 9,
+        startTime: "21:00",
+        endTime: "22:00",
+        timeSlotStart: 11,
+        timeSlotEnd: 11,
         duration: 1,
       },
       {
         id: 29,
         title:
-          "Master AI Design with ImagineArt’s Creative Playground & Creator Community",
+          "Master AI Design with ImagineArt's Creative Playground & Creator Community",
         speaker: "Imagine Art",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "10:00",
-        endTime: "10:00",
-        timeSlotStart: 10,
-        timeSlotEnd: 10,
+        startTime: "22:00",
+        endTime: "23:00",
+        timeSlotStart: 12,
+        timeSlotEnd: 12,
         duration: 1,
       },
       {
@@ -413,10 +427,10 @@ const scheduleData: DaySchedule = {
         speaker: "Sloyd",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "11:00",
-        endTime: "11:00",
-        timeSlotStart: 11,
-        timeSlotEnd: 11,
+        startTime: "23:00",
+        endTime: "00:00",
+        timeSlotStart: 13,
+        timeSlotEnd: 13,
         duration: 1,
       },
       {
@@ -425,10 +439,10 @@ const scheduleData: DaySchedule = {
         speaker: "Roustan/DJ Make",
         type: "Community",
         stage: "MainStage",
-        startTime: "1:00",
-        endTime: "1:00",
-        timeSlotStart: 13,
-        timeSlotEnd: 13,
+        startTime: "01:00",
+        endTime: "02:00",
+        timeSlotStart: 15,
+        timeSlotEnd: 15,
         duration: 1,
       },
     ],
@@ -443,9 +457,9 @@ const scheduleData: DaySchedule = {
         type: "Workshop",
         stage: "MainStage",
         startTime: "12:00",
-        endTime: "12:00",
-        timeSlotStart: 1,
-        timeSlotEnd: 1,
+        endTime: "13:00",
+        timeSlotStart: 2,
+        timeSlotEnd: 2,
         duration: 1,
       },
       {
@@ -455,10 +469,10 @@ const scheduleData: DaySchedule = {
         speaker: "Nico Earnshaw / Bay?",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "1:00",
-        endTime: "1:00",
-        timeSlotStart: 2,
-        timeSlotEnd: 2,
+        startTime: "13:00",
+        endTime: "14:00",
+        timeSlotStart: 3,
+        timeSlotEnd: 3,
         duration: 1,
       },
       {
@@ -467,10 +481,10 @@ const scheduleData: DaySchedule = {
         speaker: "Nico Earnshaw / Bay?",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "2:00",
-        endTime: "2:00",
-        timeSlotStart: 3,
-        timeSlotEnd: 3,
+        startTime: "14:00",
+        endTime: "15:00",
+        timeSlotStart: 4,
+        timeSlotEnd: 4,
         duration: 1,
       },
       {
@@ -480,10 +494,10 @@ const scheduleData: DaySchedule = {
         speaker: "Bay",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "3:00",
-        endTime: "3:00",
-        timeSlotStart: 4,
-        timeSlotEnd: 4,
+        startTime: "15:00",
+        endTime: "16:00",
+        timeSlotStart: 5,
+        timeSlotEnd: 5,
         duration: 1,
       },
       {
@@ -492,10 +506,10 @@ const scheduleData: DaySchedule = {
         speaker: "Brave",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "4:00",
-        endTime: "4:00",
-        timeSlotStart: 5,
-        timeSlotEnd: 5,
+        startTime: "16:00",
+        endTime: "17:00",
+        timeSlotStart: 6,
+        timeSlotEnd: 6,
         duration: 1,
       },
       {
@@ -505,10 +519,10 @@ const scheduleData: DaySchedule = {
         speaker: "Imagine Art",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "5:00",
-        endTime: "5:00",
-        timeSlotStart: 6,
-        timeSlotEnd: 6,
+        startTime: "17:00",
+        endTime: "18:00",
+        timeSlotStart: 7,
+        timeSlotEnd: 7,
         duration: 1,
       },
       {
@@ -517,10 +531,10 @@ const scheduleData: DaySchedule = {
         speaker: "Sloyd",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "6:00",
-        endTime: "6:00",
-        timeSlotStart: 7,
-        timeSlotEnd: 7,
+        startTime: "18:00",
+        endTime: "19:00",
+        timeSlotStart: 8,
+        timeSlotEnd: 8,
         duration: 1,
       },
       {
@@ -529,10 +543,10 @@ const scheduleData: DaySchedule = {
         speaker: "CSM",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "8:00",
-        endTime: "8:00",
-        timeSlotStart: 8,
-        timeSlotEnd: 8,
+        startTime: "20:00",
+        endTime: "21:00",
+        timeSlotStart: 10,
+        timeSlotEnd: 10,
         duration: 1,
       },
       {
@@ -542,10 +556,10 @@ const scheduleData: DaySchedule = {
         speaker: "Nico Earnshaw / Bay?",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "9:00",
-        endTime: "9:00",
-        timeSlotStart: 9,
-        timeSlotEnd: 9,
+        startTime: "21:00",
+        endTime: "22:00",
+        timeSlotStart: 11,
+        timeSlotEnd: 11,
         duration: 1,
       },
       {
@@ -554,10 +568,10 @@ const scheduleData: DaySchedule = {
         speaker: "Nico Earnshaw / Bay?",
         type: "Workshop",
         stage: "MainStage",
-        startTime: "10:00",
-        endTime: "10:00",
-        timeSlotStart: 10,
-        timeSlotEnd: 10,
+        startTime: "22:00",
+        endTime: "23:00",
+        timeSlotStart: 12,
+        timeSlotEnd: 12,
         duration: 1,
       },
       {
@@ -566,23 +580,20 @@ const scheduleData: DaySchedule = {
         speaker: "AudioHotLab",
         type: "Community",
         stage: "MainStage",
-        startTime: "11:00",
-        endTime: "11:00",
-        timeSlotStart: 11,
-        timeSlotEnd: 11,
+        startTime: "23:00",
+        endTime: "00:00",
+        timeSlotStart: 13,
+        timeSlotEnd: 13,
         duration: 1,
       },
     ],
   },
 }
 
-const dateOptions = [
+export const dateOptions = [
   { key: "sept-23", date: "SEPT 23", label: "Pre event" },
   { key: "sept-24", date: "SEPT 24", label: "Day One" },
   { key: "sept-25", date: "SEPT 25", label: "Day Two" },
   { key: "sept-26", date: "SEPT 26", label: "Day Three" },
   { key: "sept-27", date: "SEPT 27", label: "Day Four" },
-]
-
-export type { ScheduleEvent, StageSchedule, DaySchedule }
-export { timeSlots, stages, scheduleData, dateOptions }
+] as const
