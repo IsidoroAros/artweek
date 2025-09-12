@@ -109,8 +109,18 @@ const LogosContainer = styled.div`
     width: 100%;
     height: 100%;
     object-fit: contain;
-    max-width: 200px;
+    max-width: 160px;
   }
+`
+
+const PartnersTitle = styled.h3`
+  font-size: 2.2rem;
+  margin: 0;
+  text-transform: uppercase;
+  opacity: 0.8;
+  font-weight: 600;
+  color: ${theme.black};
+  margin-bottom: 48px;
 `
 
 const CreditList = () => {
@@ -184,6 +194,7 @@ const CreditList = () => {
           />
         </CenteredDownloadButton>
       </CreditListContainer>
+      <PartnersTitle>Partners</PartnersTitle>
       <LogosContainer>
         <img src={logoOne} alt="logo" />
         <img src={logoTwo} alt="logo" />
