@@ -185,7 +185,7 @@ const TimezoneHeader = styled.div`
   align-items: flex-start;
   gap: 48px;
   width: 100%;
-  min-width: calc(106px + 200px * 14);
+  min-width: calc(106px + 200px * 17);
   border-top: 1px solid #203455;
   border-bottom: 1px solid #203455;
   background: #33435c;
@@ -226,7 +226,8 @@ const TimezoneHeader = styled.div`
     display: flex;
     padding-left: 106px;
     align-items: center;
-    flex: 1;
+    /* flex: 1; */
+    /* min-width: calc(106px + 200px * 17); */
 
     .time-slot {
       width: 200px;
@@ -246,7 +247,7 @@ const ScheduleGrid = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-width: calc(106px + 200px * 14);
+  min-width: calc(106px + 200px * 17);
 `
 
 const ScheduleRow = styled.div`
@@ -254,7 +255,7 @@ const ScheduleRow = styled.div`
   height: 200px;
   align-items: stretch;
   width: 100%;
-  min-width: calc(106px + 200px * 14);
+  min-width: calc(106px + 200px * 17);
   transition: all 0.3s ease;
 `
 

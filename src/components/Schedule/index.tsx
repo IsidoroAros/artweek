@@ -138,13 +138,13 @@ const getDefaultDate = () => {
   // Check if we're in September and within the date range
   if (currentMonth === 9) {
     // September
-    if (currentDay >= 23 && currentDay <= 27) {
+    if (currentDay >= 24 && currentDay <= 27) {
       return `sept-${currentDay}`
     }
   }
 
-  // Default to September 23 if not in range
-  return "sept-23"
+  // Default to September 24 if not in range
+  return "sept-24"
 }
 
 const Schedule = () => {

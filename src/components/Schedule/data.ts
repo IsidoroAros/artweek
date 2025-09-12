@@ -20,29 +20,28 @@ export interface DaySchedule {
 }
 
 export const timeSlots: string[] = [
-  "10:00", // 0
-  "11:00", // 1
-  "12:00", // 2 (Midday)
-  "13:00", // 3
-  "14:00", // 4
-  "15:00", // 5
-  "16:00", // 6
-  "17:00", // 7
-  "18:00", // 8
-  "19:00", // 9
-  "20:00", // 10
-  "21:00", // 11
-  "22:00", // 12
-  "23:00", // 13
-  "Midnight", // 14 (Midnight)
-  "01:00", // 15
-  "02:00", // 16
+  "10:00",
+  "11:00",
+  "Midday",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00",
+  "21:00",
+  "22:00",
+  "23:00",
+  "Midnight",
+  "01:00",
+  "02:00",
 ]
 
 export const stages = ["MainStage"] as const
 
 export const scheduleData: DaySchedule = {
-  "sept-23": { MainStage: [] },
   "sept-24": {
     MainStage: [
       {
@@ -159,6 +158,19 @@ export const scheduleData: DaySchedule = {
         duration: 1,
       },
       {
+        id: Math.random(),
+        title:
+          "Find Your Next Collab! Easy, Fun Networking Led by a Virtual Host",
+        speaker: "Bay Backner",
+        type: "Workshop",
+        stage: "MainStage",
+        startTime: "00:00",
+        endTime: "01:00",
+        timeSlotStart: 14,
+        timeSlotEnd: 14,
+        duration: 1,
+      },
+      {
         id: 10,
         title: "RAGE! Art & Industrial Music",
         speaker: "RAGE",
@@ -248,6 +260,18 @@ export const scheduleData: DaySchedule = {
         duration: 1,
       },
       {
+        id: Math.random(),
+        title: "The WIP TOUR at Decentraland Art Week",
+        speaker: "The WIP Meetup",
+        type: "Tour",
+        stage: "MainStage",
+        startTime: "19:00",
+        endTime: "20:00",
+        timeSlotStart: 9,
+        timeSlotEnd: 9,
+        duration: 1,
+      },
+      {
         id: 17,
         title: "Brave at Decentraland Art Week: Pro Tips for Creators",
         speaker: "Brave x Decentraland",
@@ -293,6 +317,19 @@ export const scheduleData: DaySchedule = {
         endTime: "00:00",
         timeSlotStart: 13,
         timeSlotEnd: 13,
+        duration: 1,
+      },
+      {
+        id: Math.random(),
+        title:
+          "Curator Secrets: How to Be Selected for Art Shows — Virtual and IRL",
+        speaker: "Bay Backner",
+        type: "Workshop",
+        stage: "MainStage",
+        startTime: "00:00",
+        endTime: "01:00",
+        timeSlotStart: 14,
+        timeSlotEnd: 14,
         duration: 1,
       },
       {
@@ -434,6 +471,19 @@ export const scheduleData: DaySchedule = {
         duration: 1,
       },
       {
+        id: Math.random(),
+        title: "Instant Assets: Creating Decentraland-Ready 3D Models",
+        speaker: "CSM",
+        type: "Workshop",
+        stage: "MainStage",
+        startTime: "23:00",
+        endTime: "00:00",
+        timeSlotStart: 14,
+        timeSlotEnd: 14,
+        duration: 1,
+      },
+
+      {
         id: 31,
         title: "Meta Beast Roaming Party @ Roustan Gallery",
         speaker: "Roustan/DJ Make",
@@ -538,6 +588,19 @@ export const scheduleData: DaySchedule = {
         duration: 1,
       },
       {
+        id: Math.random(),
+        title:
+          "Digital to Physical: Take Your Decentraland Art Anywhere with AR",
+        speaker: "Artivive",
+        type: "Workshop",
+        stage: "MainStage",
+        startTime: "19:00",
+        endTime: "20:00",
+        timeSlotStart: 9,
+        timeSlotEnd: 9,
+        duration: 1,
+      },
+      {
         id: 39,
         title: "Instant Assets: Creating Decentraland-Ready 3D Models",
         speaker: "CSM",
@@ -591,7 +654,6 @@ export const scheduleData: DaySchedule = {
 }
 
 export const dateOptions = [
-  { key: "sept-23", date: "SEPT 23", label: "Pre event" },
   { key: "sept-24", date: "SEPT 24", label: "Day One" },
   { key: "sept-25", date: "SEPT 25", label: "Day Two" },
   { key: "sept-26", date: "SEPT 26", label: "Day Three" },
