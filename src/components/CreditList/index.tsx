@@ -140,13 +140,9 @@ const CreditList = () => {
   return (
     <>
       <CreditListContainer>
-        <div>
-          <h2>
-            <AnimatedCharacters isVisible={true}>
-              Credit List
-            </AnimatedCharacters>
-          </h2>
-        </div>
+        <h2>
+          <AnimatedCharacters isVisible={true}>Credit List</AnimatedCharacters>
+        </h2>
         <CreditListContent>
           <Section>
             <SectionTitle>Artists & Curators</SectionTitle>
