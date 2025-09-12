@@ -47,7 +47,7 @@ export const scheduleData: DaySchedule = {
       {
         id: 1,
         title: "The 101 on Decentraland Art Week: Launch Your Own Gallery!",
-        speaker: "Bay",
+        speaker: "Bay Backner & Guests",
         type: "X Space",
         stage: "MainStage",
         startTime: "11:00",
@@ -60,7 +60,7 @@ export const scheduleData: DaySchedule = {
         id: 2,
         title:
           "Behind the Build: How 7 Artists Turned Ideas into Immersive Art",
-        speaker: "Dana",
+        speaker: "Dana Mart",
         type: "Workshop",
         stage: "MainStage",
         startTime: "12:00",
@@ -72,7 +72,7 @@ export const scheduleData: DaySchedule = {
       {
         id: 3,
         title: "LIVE TOUR 1",
-        speaker: "Bay",
+        speaker: "Art Week Artists",
         type: "Tour",
         stage: "MainStage",
         startTime: "13:00",
@@ -85,7 +85,7 @@ export const scheduleData: DaySchedule = {
         id: 4,
         title:
           "Your First Virtual Gallery: A Step-by-Step Build in Decentraland",
-        speaker: "Nico Earnshaw / Bay?",
+        speaker: "Nico Earnshaw",
         type: "Workshop",
         stage: "MainStage",
         startTime: "14:00",
@@ -98,7 +98,7 @@ export const scheduleData: DaySchedule = {
         id: 5,
         title:
           "Find Your Next Collab! Easy, Fun Networking Led by a Virtual Host",
-        speaker: "Bay - DANA",
+        speaker: "Bay Backner",
         type: "Workshop",
         stage: "MainStage",
         startTime: "15:00",
@@ -110,7 +110,7 @@ export const scheduleData: DaySchedule = {
       {
         id: 6,
         title: "Your Art in Decentraland? Here's How to Make It Happen",
-        speaker: "Kim",
+        speaker: "Kim Currier & Guests",
         type: "X Space",
         stage: "MainStage",
         startTime: "20:00",
@@ -122,7 +122,7 @@ export const scheduleData: DaySchedule = {
       {
         id: 7,
         title: "LIVE TOUR 2",
-        speaker: "Bay / Kim",
+        speaker: "Digital Fashion Week",
         type: "Tour",
         stage: "MainStage",
         startTime: "21:00",
@@ -135,7 +135,7 @@ export const scheduleData: DaySchedule = {
         id: 8,
         title:
           "Your First Virtual Gallery: A Step-by-Step Build in Decentraland",
-        speaker: "Nico Earnshaw / Bay",
+        speaker: "Nico Earnshaw",
         type: "Workshop",
         stage: "MainStage",
         startTime: "22:00",
@@ -148,7 +148,7 @@ export const scheduleData: DaySchedule = {
         id: 9,
         title:
           "Behind the Build: How 7 Artists Turned Ideas into Immersive Art",
-        speaker: "Dana",
+        speaker: "Dana Mart",
         type: "Workshop",
         stage: "MainStage",
         startTime: "23:00",
@@ -189,7 +189,7 @@ export const scheduleData: DaySchedule = {
       {
         id: 11,
         title: "The Insider’s Guide to Creating for Virtual Art Shows",
-        speaker: "Bay",
+        speaker: "Bay Backner & Guests",
         type: "X Space",
         stage: "MainStage",
         startTime: "11:00",
@@ -200,7 +200,7 @@ export const scheduleData: DaySchedule = {
       },
       {
         id: 12,
-        title: "Using Brave as a Creator: Get Rewarded while Getting Noticed",
+        title: "Brave for Creators: Privacy, Web3, and Fair Rewards",
         speaker: "Brave",
         type: "Workshop",
         stage: "MainStage",
@@ -213,7 +213,7 @@ export const scheduleData: DaySchedule = {
       {
         id: 13,
         title: "LIVE TOUR 3",
-        speaker: "Bay",
+        speaker: "Art Week Artists",
         type: "Tour",
         stage: "MainStage",
         startTime: "13:00",
@@ -225,7 +225,7 @@ export const scheduleData: DaySchedule = {
       {
         id: 14,
         title: "How to Open & Promote Your Own Gallery in Decentraland",
-        speaker: "Nico Earnshaw / Bay / Kim",
+        speaker: "Nico Earnshaw & Dana Mart",
         type: "Workshop",
         stage: "MainStage",
         startTime: "14:00",
@@ -250,7 +250,7 @@ export const scheduleData: DaySchedule = {
         id: 16,
         title:
           "Curator Secrets: How to Be Selected for Art Shows — Virtual and IRL",
-        speaker: "Bay",
+        speaker: "Bay Backner",
         type: "Workshop",
         stage: "MainStage",
         startTime: "16:00",
@@ -298,7 +298,7 @@ export const scheduleData: DaySchedule = {
       {
         id: 19,
         title: "How to Open & Promote Your Own Gallery in Decentraland",
-        speaker: "Nico Earnshaw / Bay / Kim",
+        speaker: "Nico Earnshaw & Dana Mart",
         type: "Workshop",
         stage: "MainStage",
         startTime: "22:00",
@@ -363,7 +363,7 @@ export const scheduleData: DaySchedule = {
       {
         id: 22,
         title: "AI for 3D Art: A Beginner’s Guide",
-        speaker: "Bay",
+        speaker: "Bay Backner & Guests",
         type: "X Space",
         stage: "MainStage",
         startTime: "11:00",
@@ -388,7 +388,7 @@ export const scheduleData: DaySchedule = {
       {
         id: 24,
         title: "LIVE TOUR 6",
-        speaker: "Bay",
+        speaker: "Art Week Artists",
         type: "Tour",
         stage: "MainStage",
         startTime: "13:00",
@@ -424,7 +424,7 @@ export const scheduleData: DaySchedule = {
       {
         id: 27,
         title: "AI-Powered Creation in Decentraland",
-        speaker: "Kim",
+        speaker: "Kim Currier & Guests",
         type: "X Space",
         stage: "MainStage",
         startTime: "20:00",
@@ -436,7 +436,7 @@ export const scheduleData: DaySchedule = {
       {
         id: 28,
         title: "LIVE TOUR 7",
-        speaker: "Kim /Dana",
+        speaker: "Art Week Artists",
         type: "Tour",
         stage: "MainStage",
         startTime: "21:00",
@@ -503,7 +503,7 @@ export const scheduleData: DaySchedule = {
         id: 32,
         title:
           "Behind the Building: How 7 Artists Turned Ideas into Immersive Art",
-        speaker: "Dana",
+        speaker: "Dana Mart",
         type: "Workshop",
         stage: "MainStage",
         startTime: "12:00",
@@ -516,7 +516,7 @@ export const scheduleData: DaySchedule = {
         id: 33,
         title:
           "Your First Virtual Gallery: A Step-by-Step Build in Decentraland",
-        speaker: "Nico Earnshaw / Bay?",
+        speaker: "Nico Earnshaw",
         type: "Workshop",
         stage: "MainStage",
         startTime: "13:00",
@@ -528,7 +528,7 @@ export const scheduleData: DaySchedule = {
       {
         id: 34,
         title: "How to Open & Promote Your Own Gallery in Decentraland",
-        speaker: "Nico Earnshaw / Bay?",
+        speaker: "Nico Earnshaw & Dana Mart",
         type: "Workshop",
         stage: "MainStage",
         startTime: "14:00",
@@ -541,7 +541,7 @@ export const scheduleData: DaySchedule = {
         id: 35,
         title:
           "Curator Secrets: How to Be Selected for Art Shows — Virtual and IRL",
-        speaker: "Bay",
+        speaker: "Bay Backner",
         type: "Workshop",
         stage: "MainStage",
         startTime: "15:00",
@@ -616,7 +616,7 @@ export const scheduleData: DaySchedule = {
         id: 40,
         title:
           "Your First Virtual Gallery: A Step-by-Step Build in Decentraland",
-        speaker: "Nico Earnshaw / Bay?",
+        speaker: "Nico Earnshaw",
         type: "Workshop",
         stage: "MainStage",
         startTime: "21:00",
@@ -628,7 +628,7 @@ export const scheduleData: DaySchedule = {
       {
         id: 41,
         title: "How to Open & Promote Your Own Gallery in Decentraland",
-        speaker: "Nico Earnshaw / Bay?",
+        speaker: "Nico Earnshaw & Dana Mart",
         type: "Workshop",
         stage: "MainStage",
         startTime: "22:00",
