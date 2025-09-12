@@ -4,7 +4,7 @@ import { IoMdClose } from "react-icons/io"
 import { RiLink } from "react-icons/ri"
 import { artistCards, ArtistCard as ArtistCardType } from "./data"
 import { Modal } from "../Modal"
-import map from "../../../public/img/bigger-picture/map-bigger-pic.png"
+import map from "../../../public/img/bigger-picture/map-final.png"
 import {
   ArtistCard,
   ArtistCardsContainer,
@@ -54,7 +54,7 @@ const BiggerPictureSection: FC = () => {
 
         <ArtistCardsContainer>
           <ArtistCardsGrid>
-            {artistCards.map((artist) => (
+            {artistCards.map((artist, index) => (
               <ArtistCard
                 key={artist.id}
                 onClick={() => handleArtistClick(artist)}
@@ -66,7 +66,9 @@ const BiggerPictureSection: FC = () => {
                 />
                 <ArtistInfo>
                   <ArtistDetails>
-                    <ArtistName>{artist.artistName}</ArtistName>
+                    <ArtistName>
+                      {index + 1}. {artist.artistName}
+                    </ArtistName>
                     <ArtistDescription>{artist.title}</ArtistDescription>
                   </ArtistDetails>
                 </ArtistInfo>

@@ -146,11 +146,6 @@ const CreditList = () => {
               Credit List
             </AnimatedCharacters>
           </h2>
-          <h4>
-            Alongside the artists and studios listed here, Art Week is made
-            possible by the creativity and contributions of the Decentraland
-            community.
-          </h4>
         </div>
         <CreditListContent>
           <Section>
@@ -186,6 +181,11 @@ const CreditList = () => {
             </ColumnsContainer>
           </Section>
         </CreditListContent>
+        <h4>
+          Alongside the artists and studios listed here, Art Week is made
+          possible by the creativity and contributions of the Decentraland
+          community.
+        </h4>
         <CenteredDownloadButton>
           <DownloadBtn
             customText="DOWNLOAD DECENTRALAND"
