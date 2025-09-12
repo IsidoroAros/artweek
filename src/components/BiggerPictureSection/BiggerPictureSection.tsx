@@ -67,7 +67,7 @@ const BiggerPictureSection: FC = () => {
                 <ArtistInfo>
                   <ArtistDetails>
                     <ArtistName>
-                      {index + 1}. {artist.artistName}
+                      C{index + 1}. {artist.artistName}
                     </ArtistName>
                     <ArtistDescription>{artist.title}</ArtistDescription>
                   </ArtistDetails>
