@@ -2,9 +2,9 @@ import { FC, useState } from "react"
 import { GoArrowUpRight } from "react-icons/go"
 import { IoMdClose } from "react-icons/io"
 import { RiLink } from "react-icons/ri"
-import { artistCards, ArtistCard as ArtistCardType } from "./data"
-import { Modal } from "../Modal"
+import { ArtistCard as ArtistCardType, artistCards } from "./data"
 import map from "../../../public/img/bigger-picture/map-final.png"
+import { Modal } from "../Modal"
 import {
   ArtistCard,
   ArtistCardsContainer,

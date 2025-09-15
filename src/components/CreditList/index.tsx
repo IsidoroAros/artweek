@@ -1,13 +1,13 @@
 import { styled } from "styled-components"
 import { artistsAndCurators, studios } from "./data"
-import { breakpoints, theme } from "../../utils/theme"
-import { AnimatedCharacters } from "../animatedCharacters"
-import { DownloadBtn } from "../DownloadBtn/DownloadBtn"
 import logoOne from "../../../public/img/credits/logo-1.png"
 import logoTwo from "../../../public/img/credits/logo-2.png"
 import logoThree from "../../../public/img/credits/logo-3.png"
 import logoFour from "../../../public/img/credits/logo-4.png"
 import logoFive from "../../../public/img/credits/logo-5.png"
+import { breakpoints, theme } from "../../utils/theme"
+import { AnimatedCharacters } from "../animatedCharacters"
+import { DownloadBtn } from "../DownloadBtn/DownloadBtn"
 
 const CreditListContainer = styled.div`
   width: 100%;

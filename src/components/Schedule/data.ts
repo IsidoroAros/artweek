@@ -1,4 +1,4 @@
-export interface ScheduleEvent {
+interface ScheduleEvent {
   id: number
   title: string
   speaker: string
@@ -11,15 +11,15 @@ export interface ScheduleEvent {
   duration: number
 }
 
-export interface StageSchedule {
+interface StageSchedule {
   [stageName: string]: ScheduleEvent[]
 }
 
-export interface DaySchedule {
+interface DaySchedule {
   [key: string]: StageSchedule
 }
 
-export const timeSlots: string[] = [
+const timeSlots: string[] = [
   "10:00",
   "11:00",
   "Midday",
@@ -39,9 +39,9 @@ export const timeSlots: string[] = [
   "02:00",
 ]
 
-export const stages = ["MainStage"] as const
+const stages = ["MainStage"] as const
 
-export const scheduleData: DaySchedule = {
+const scheduleData: DaySchedule = {
   "sept-24": {
     MainStage: [
       {
@@ -653,9 +653,13 @@ export const scheduleData: DaySchedule = {
   },
 }
 
-export const dateOptions = [
+const dateOptions = [
   { key: "sept-24", date: "SEPT 24", label: "Day One" },
   { key: "sept-25", date: "SEPT 25", label: "Day Two" },
   { key: "sept-26", date: "SEPT 26", label: "Day Three" },
   { key: "sept-27", date: "SEPT 27", label: "Day Four" },
 ] as const
+
+export type { ScheduleEvent, StageSchedule, DaySchedule }
+
+export { timeSlots, stages, scheduleData, dateOptions }

@@ -1,6 +1,7 @@
 // Styled Components
 import { Suspense, lazy, useEffect } from "react"
 import { About } from "./components/About/About"
+import { BiggerPictureSection } from "./components/BiggerPictureSection"
 import { CreditList } from "./components/CreditList"
 import { Faq } from "./components/Faq/Faq"
 import { Footer } from "./components/Footer/Footer"
@@ -10,6 +11,7 @@ import { MapSection } from "./components/MapSection"
 import { Marquee } from "./components/Marquee/Marquee"
 import { MarqueeContainerWrapper } from "./components/Marquee/Marquee.styled"
 import { Navbar } from "./components/Navbar/Navbar"
+import { Schedule } from "./components/Schedule"
 import { config } from "./config"
 import { useLenis } from "./hooks/useLenis"
 // Components
@@ -20,8 +22,6 @@ import {
   shouldEnableAnalytics,
 } from "./modules/analytics/segment"
 import { AppContainer } from "./App.styled"
-import { Schedule } from "./components/Schedule"
-import { BiggerPictureSection } from "./components/BiggerPictureSection"
 // import { VideoSection } from './components/VideoSection/VideoSection';
 
 // Lazy load VideoSection component
