@@ -94,9 +94,6 @@ const App = () => {
 
         {/* 3. About - Experience Art Week (Download DCL button) */}
         <About />
-        <MarqueeContainerWrapper>
-          <Marquee variant="light" />
-        </MarqueeContainerWrapper>
 
         {/* 4. Partner Logos */}
         <Partners />
