@@ -88,9 +88,6 @@ const App = () => {
         <Suspense fallback={<VideoSectionLoader />}>
           <VideoSection />
         </Suspense>
-        <MarqueeContainerWrapper>
-          <Marquee variant="light" />
-        </MarqueeContainerWrapper>
 
         {/* 3. About - Experience Art Week (Download DCL button) */}
         <About />
@@ -103,27 +100,15 @@ const App = () => {
 
         {/* 5. Schedule */}
         <Schedule />
-        <MarqueeContainerWrapper>
-          <Marquee variant="light" />
-        </MarqueeContainerWrapper>
 
         {/* 6. Installations */}
         <Installations />
-        <MarqueeContainerWrapper>
-          <Marquee variant="light" />
-        </MarqueeContainerWrapper>
 
         {/* 7. Map (Download DCL button) */}
         <MapSection />
-        <MarqueeContainerWrapper>
-          <Marquee variant="light" />
-        </MarqueeContainerWrapper>
 
         {/* 8. Bigger Picture Map */}
         <BiggerPictureSection />
-        <MarqueeContainerWrapper>
-          <Marquee variant="light" />
-        </MarqueeContainerWrapper>
 
         {/* 9. Credit List (Download DCL button) */}
         <CreditList />

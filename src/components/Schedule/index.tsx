@@ -79,7 +79,7 @@ const getEventIcon = (type: string) => {
           />
         </svg>
       )
-    case "Community":
+    case "Party":
       return (
         <svg
           width="16"
